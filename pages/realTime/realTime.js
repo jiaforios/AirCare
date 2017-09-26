@@ -10,14 +10,14 @@ Page({
       humidity:0,
       pm2:0,
       temperature:0,
-      tvoc:0
+      tvoc:0,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+      var that = this
     setInterval(function () {
       //循环执行代码  
       console.log("2秒")
@@ -29,8 +29,14 @@ Page({
         },
         success: function (res) {
           console.log(res.data)
-          this.setData({
-            dataArr:res.data,
+          console.log("返回数据为pm2：" + res.data.data.pm2);
+          that.setData({
+            pm2: res.data.data.pm2,
+            pm10: res.data.data.pm10,
+            co2: res.data.data.co2,
+            temperature: res.data.data.temperature,
+            humidity: res.data.data.humidity,
+            tvoc: res.data.data.tvoc,
           })
         }
       })

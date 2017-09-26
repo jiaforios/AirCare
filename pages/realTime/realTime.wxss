@@ -1,6 +1,20 @@
 /* pages/realTime/realTime.wxss */
+.leftView{
+background: rgb(210, 210, 210);
+margin-left: 20px;
+margin-top: 20px;
+width: 150px;
+height: 300px;
+flex-direction: column;
+}
+.inView{
+  margin-top: 20px;
+}
 .datainfo{
   font-size: 13px;
-  color: red;
-  margin: 20px;
+  color:rgb(5, 175, 235);
+  margin-left: 20px;
+  width: 100px;
+  height: 30px;
+  margin-top: 10px;
 }

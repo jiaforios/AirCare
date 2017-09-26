@@ -1,6 +1,27 @@
 <!--pages/realTime/realTime.wxml-->
-<view class='container'>
-  <block wx:for="{{dataArr}}">
-    <label class='datainfo'>你好</label>
-  </block>
+<view class='leftView'>
+  <view class='inView'>
+   <label class='datainfo'>pm2.5值: {{pm2}}</label>
+  </view>
+
+  <view class='inView'>
+   <label class='datainfo'>pm10值: {{pm10}}</label> 
+  </view>
+
+  <view class='inView'>
+   <label class='datainfo'>co2值: {{co2}}</label> 
+  </view>
+
+  <view class='inView'>
+   <label class='datainfo'>湿度值: {{humidity}}</label> 
+  </view>
+
+  <view class='inView'>
+   <label class='datainfo'>温度值: {{temperature}}</label> 
+  </view>
+
+  <view class='inView'>
+   <label class='datainfo'>tvoc值: {{tvoc}}</label> 
+  </view>
+
 </view>
