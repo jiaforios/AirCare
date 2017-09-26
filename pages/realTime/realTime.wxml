@@ -1,2 +1,6 @@
 <!--pages/realTime/realTime.wxml-->
-<text>pages/realTime/realTime.wxml</text>
+<view class='container'>
+  <block wx:for="{{dataArr}}">
+    <label class='datainfo'>你好</label>
+  </block>
+</view>

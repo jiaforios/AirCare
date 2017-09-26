@@ -1,1 +1,6 @@
 /* pages/realTime/realTime.wxss */
+.datainfo{
+  font-size: 13px;
+  color: red;
+  margin: 20px;
+}

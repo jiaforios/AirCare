@@ -5,14 +5,37 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+      co2:0,
+      pm10:0,
+      humidity:0,
+      pm2:0,
+      temperature:0,
+      tvoc:0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+
+    setInterval(function () {
+      //循环执行代码  
+      console.log("2秒")
+      wx.request({
+        url: 'https://www.airmoniter.com/airQuality/queryAirQuality.do?deviceId=50028',
+
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        success: function (res) {
+          console.log(res.data)
+          this.setData({
+            dataArr:res.data,
+          })
+        }
+      })
+    }, 2000)
+
   },
 
   /**
