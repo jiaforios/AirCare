@@ -50,5 +50,12 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  loginAction:function(){
+     console.log("登录操作")
+     wx.navigateTo({
+       url: '../realTime/realTime',
+     })
   }
+
 })

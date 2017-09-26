@@ -1,4 +1,4 @@
-<!--index.wxml-->
+<!--pages/login/login.wxml-->
 <view class="container">
     <input placeholder='请输入您的手机号' class='inputPhonePwd'></input>
     <button class='loginBtn' bindtap='loginAction'>登录</button>
