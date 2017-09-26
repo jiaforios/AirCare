@@ -2,12 +2,40 @@
   "pages": [
     "pages/login/login",
     "pages/logs/logs",
-    "pages/realTime/realTime"
+    "pages/realTime/realTime",
+    "pages/history/history",
+    "pages/setting/setting"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#00BFFF",
     "navigationBarTitleText": "新风监测系统",
     "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "backgroundColor": "#E6E6E6",
+    "list": [
+      {
+        "pagePath": "pages/realTime/realTime",
+        "text": "实时",
+        "iconPath": "image/realTime_unselected@2x.png",
+        "selectedIconPath": "image/realTime_selected@2x.png"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "text": "历史",
+        "iconPath": "image/history_unselected@2x.png",
+        "selectedIconPath": "image/history_selected@2x.png"
+      },
+      {
+        "pagePath": "pages/setting/setting",
+        "text": "设置",
+        "iconPath": "image/setting_unselected@2x.png",
+        "selectedIconPath": "image/setting_selected@2x.png"
+      }
+    ]
   }
 }

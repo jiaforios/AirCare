@@ -1,4 +1,4 @@
-// pages/login/login.js
+// pages/history/history.js
 Page({
 
   /**
@@ -62,16 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-
-  /** 登录按钮事件 */
-    loginAction: function () {
-    console.log("登录操作")
-    // wx.navigateTo({
-    //   url: '../realTime/realTime',
-    // })
-    wx.switchTab({
-      url: '../realTime/realTime',
-    })
   }
 })
