@@ -1,1 +1,6 @@
 /* pages/history/history.wxss */
+.canvasStyle{
+  margin: 20px;
+  width: 375px;
+  height: 300px;
+}
