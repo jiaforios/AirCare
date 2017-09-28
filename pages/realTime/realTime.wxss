@@ -1,20 +1,62 @@
 /* pages/realTime/realTime.wxss */
 .leftView{
-background: rgb(210, 210, 210);
-margin-left: 20px;
+background: white;
+margin-left: 10px;
 margin-top: 20px;
-width: 150px;
+margin-right: 10px;
+width: 100px;
 height: 300px;
 flex-direction: column;
 }
 .inView{
   margin-top: 20px;
+  justify-content: flex-end;
 }
 .datainfo{
   font-size: 13px;
-  color:rgb(5, 175, 235);
-  margin-left: 20px;
   width: 100px;
   height: 30px;
   margin-top: 10px;
+}
+.tr{
+  display: flex;
+  justify-content: center;
+}
+.leftblack{
+  color: black;
+  font-size: 15px;
+  text-align: right;
+}
+.midblue{
+    color:rgb(5, 175, 235);
+    font-size: 15px;
+    text-align: center;
+}
+.rightred{
+  color: red;
+  font-size: 15px;
+  text-align: center;
+}
+
+.evaluating{
+  background: rgb(235, 235, 235);
+  width: 200px;
+  height: 150px;
+  margin-top: 30px;
+  margin-left: 100px;
+  display: flex;
+  flex-direction: row;
+}
+.evaView{
+  width: 40px;
+  background: red;
+
+}
+.testView{
+  width: 60px;
+  background: blue;
+  height: 50px;
+  /* position: fixed; */
+  margin-bottom: 20px;
+  left: 80px;
 }

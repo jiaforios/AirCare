@@ -11,6 +11,7 @@ Page({
       pm2:0,
       temperature:0,
       tvoc:0,
+      evaViewHeight:10,
   },
 
   /**
@@ -37,6 +38,7 @@ Page({
             temperature: res.data.data.temperature,
             humidity: res.data.data.humidity,
             tvoc: res.data.data.tvoc,
+            evaViewHeight:res.data.data.pm2,
           })
         }
       })
