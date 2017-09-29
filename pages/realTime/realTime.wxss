@@ -20,7 +20,7 @@ flex-direction: column;
 }
 .tr{
   display: flex;
-  margin-top: 180px;
+  margin-top: 150px;
   justify-content: center;
 }
 .leftblack{
@@ -41,7 +41,7 @@ flex-direction: column;
 
 .evaluating{
   background: rgb(235, 235, 235);
-  width: 200px;
+  width: 100%;
   height: 150px;
   display: flex;
   flex-direction: row;
@@ -60,4 +60,29 @@ flex-direction: column;
   position: absolute; 
   bottom: 0px;
   left: 100px;
+}
+
+.colorlevelView{
+  position: absolute;
+  justify-content: flex-end;
+  right: 100px;
+  width: 30px;
+  height: 100%;
+}
+.colorValueView{
+ position: absolute;
+ justify-content: flex-end;
+  right: 20px;
+  width: 80px;
+  height: 100%;
+}
+
+.colorlevel{
+  width: 30px;
+  height: 25px;
+}
+.coloeDesc{
+  font-size: 13px;
+  height: 25px;
+  text-align: center;
 }

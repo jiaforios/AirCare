@@ -5,6 +5,24 @@
       <view class='evaView' style='height:{{evaViewHeight}}px;'></view>
       <view class='evaViewOut' style='height:{{out_evaViewHeight}}px;'></view>
 
+      <view class='colorlevelView'>
+          <view class='colorlevel' style='background-color:red;'></view>
+          <view class='colorlevel'></view>
+          <view class='colorlevel'></view>
+          <view class='colorlevel'></view>
+          <view class='colorlevel'></view>
+          <view class='colorlevel'></view>
+      </view>
+
+       <view class='colorValueView'>
+          <view class='coloeDesc'>优</view>
+          <view class='coloeDesc'>良</view>
+          <view class='coloeDesc'>轻度污染</view>
+          <view class='coloeDesc'>中毒污染</view>
+          <view class='coloeDesc'>重度污染</view>
+          <view class='coloeDesc'>严重污染</view>
+      </view>
+
   </view>
 
 <!-- 显示室内，室外数据-->

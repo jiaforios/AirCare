@@ -85,6 +85,18 @@ Page({
           url: '../login/login',
         })
       },1000)
+  },
 
+  callAction:function(){
+    var that = this;
+    wx.makePhoneCall({
+      phoneNumber: that.data.call,
+    })
+  },
+  phoneAction: function () {
+    var that = this;
+    wx.makePhoneCall({
+      phoneNumber: that.data.phone,
+    })
   }
 })

@@ -4,8 +4,8 @@
   <view class='inView'>
      <view class='tips'>控制室内空气质量--污染物数据可视化</view>
      <image class='img' src='{{zcodeimgurlstr}}'></image>
-     <view class='tips'>电话号码:{{call}}</view>
-     <view class='tips'>手机号码:{{phone}}</view>
+     <view class='tips' bindtap='callAction'>电话号码:{{call}}</view>
+     <view class='tips' bindtap='phoneAction'>手机号码:{{phone}}</view>
      <button class='logout' bindtap='logoutAction'>退出登录</button>
    </view>
 

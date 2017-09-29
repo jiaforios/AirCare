@@ -9,6 +9,9 @@
   flex-direction: column;
    align-items: center;
 }
+.phoneCall{
+  text-decoration: underline;
+}
 .img{
   margin-top: 50px;
   width: 100px;

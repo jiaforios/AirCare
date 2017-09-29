@@ -15,8 +15,6 @@ Page({
   onLoad: function (options) {
     var userPhone = wx.getStorageSync('userPhone');
     var islogOut = app.globalData.islogout;
-    console.log(userPhone)
-    console.log(islogOut);
 // 登录过直接跳转
     if (userPhone && (islogOut != 'logout')){
       this.setData({
