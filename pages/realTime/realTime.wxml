@@ -3,7 +3,8 @@
 
   <view class='evaluating'>
       <view class='evaView' style='height:{{evaViewHeight}}px;'></view>
-      <view class='testView'></view>
+      <view class='evaViewOut' style='height:{{out_evaViewHeight}}px;'></view>
+
   </view>
 
 <!-- 显示室内，室外数据-->
@@ -46,17 +47,17 @@
     <view class='leftView'>
       <view class='inView rightred'>室外</view>
 
-      <view class='inView rightred'>{{pm2}}</view>
+      <view class='inView rightred'>{{out_pm2}}</view>
       
-      <view class='inView rightred'>{{pm10}}</view>
+      <view class='inView rightred'>{{out_pm10}}</view>
       
-      <view class='inView rightred'>{{co2}}</view>
+      <view class='inView rightred'>{{out_co2}}</view>
       
-      <view class='inView rightred'>{{humidity}}</view>
+      <view class='inView rightred'>{{out_humidity}}</view>
       
-      <view class='inView rightred'>{{temperature}}</view>
+      <view class='inView rightred'>{{out_temperature}}</view>
       
-      <view class='inView rightred'>{{tvoc}}</view>
+      <view class='inView rightred'>{{out_tvoc}}</view>
     </view>
   </view>
 

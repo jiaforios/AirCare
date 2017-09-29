@@ -1,18 +1,25 @@
 // pages/mine/mine.js
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    zcodeimgurlstr:null,
+    call:null,
+    phone:null,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+  this.setData({
+    zcodeimgurlstr: app.globalData.zcodeimgurl,
+    call: app.globalData.callPhone,
+    phone: app.globalData.handPhone
+  })
   },
 
   /**
@@ -62,5 +69,22 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  // 退出登录
+  logoutAction:function(){
+      wx.showLoading({
+        title: '正在退出登录',
+      })
+
+      setTimeout(function(){
+        wx.hideLoading();
+        app.globalData.islogout = "logout";
+
+        wx.redirectTo({
+          url: '../login/login',
+        })
+      },1000)
+
   }
 })

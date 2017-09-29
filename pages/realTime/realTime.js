@@ -1,4 +1,5 @@
 // pages/realTime/realTime.js
+var app = getApp();
 Page({
 
   /**
@@ -11,7 +12,16 @@ Page({
       pm2:0,
       temperature:0,
       tvoc:0,
-      evaViewHeight:10,
+      evaViewHeight:0,
+      out_co2: 0,
+      out_pm10: 0,
+      out_humidity: 0,
+      out_pm2: 0,
+      out_temperature: 0,
+      out_tvoc: 0,
+      out_evaViewHeight: 0,
+      inPhone:0,
+      outPhone:0,
   },
 
   /**
@@ -19,9 +29,10 @@ Page({
    */
   onLoad: function (options) {
       var that = this
+      console.log("inhone = " + app.globalData.inDeviceId);
+
     setInterval(function () {
       //循环执行代码  
-      console.log("2秒")
       wx.request({
         url: 'https://www.airmoniter.com/airQuality/queryAirQuality.do?deviceId=50028',
 
@@ -29,8 +40,8 @@ Page({
           'content-type': 'application/json' // 默认值
         },
         success: function (res) {
-          console.log(res.data)
-          console.log("返回数据为pm2：" + res.data.data.pm2);
+          // console.log(res.data)
+          // console.log("返回数据为pm2：" + res.data.data.pm2);
           that.setData({
             pm2: res.data.data.pm2,
             pm10: res.data.data.pm10,
@@ -42,6 +53,28 @@ Page({
           })
         }
       })
+
+      wx.request({
+        url: 'https://www.airmoniter.com/airQuality/queryAirQuality.do?deviceId=50122',
+
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        success: function (res) {
+          // console.log(res.data)
+          // console.log("返回数据为pm2：" + res.data.data.pm2);
+          that.setData({
+            out_pm2: res.data.data.pm2,
+            out_pm10: res.data.data.pm10,
+            out_co2: res.data.data.co2,
+            out_temperature: res.data.data.temperature,
+            out_humidity: res.data.data.humidity,
+            out_tvoc: res.data.data.tvoc,
+            out_evaViewHeight: res.data.data.pm2,
+          })
+        }
+      })
+
     }, 2000)
 
   },
