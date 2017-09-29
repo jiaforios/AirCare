@@ -1,84 +1,80 @@
 <!--pages/realTime/realTime.wxml-->
-<view class='container'>
+<view class='container' style='background-image:url(../../image/bg_color.jpg)'>
+        <view class='evaluating'>
+            <view class='evaView' style='height:{{evaViewHeight}}px;'></view>
+            <view class='evaViewOut' style='height:{{out_evaViewHeight}}px;'></view>
 
-  <view class='evaluating'>
-      <view class='evaView' style='height:{{evaViewHeight}}px;'></view>
-      <view class='evaViewOut' style='height:{{out_evaViewHeight}}px;'></view>
+            <view class='colorlevelView'>
+                <view class='colorlevel' style='background-color:red;'></view>
+                <view class='colorlevel'></view>
+                <view class='colorlevel'></view>
+                <view class='colorlevel'></view>
+                <view class='colorlevel'></view>
+                <view class='colorlevel'></view>
+            </view>
 
-      <view class='colorlevelView'>
-          <view class='colorlevel' style='background-color:red;'></view>
-          <view class='colorlevel'></view>
-          <view class='colorlevel'></view>
-          <view class='colorlevel'></view>
-          <view class='colorlevel'></view>
-          <view class='colorlevel'></view>
-      </view>
+            <view class='colorValueView'>
+                <view class='coloeDesc'>优</view>
+                <view class='coloeDesc'>良</view>
+                <view class='coloeDesc'>轻度污染</view>
+                <view class='coloeDesc'>中毒污染</view>
+                <view class='coloeDesc'>重度污染</view>
+                <view class='coloeDesc'>严重污染</view>
+            </view>
 
-       <view class='colorValueView'>
-          <view class='coloeDesc'>优</view>
-          <view class='coloeDesc'>良</view>
-          <view class='coloeDesc'>轻度污染</view>
-          <view class='coloeDesc'>中毒污染</view>
-          <view class='coloeDesc'>重度污染</view>
-          <view class='coloeDesc'>严重污染</view>
-      </view>
+        </view>
+      <!-- 显示室内，室外数据-->
+        <view class='tr'>
 
-  </view>
+        <!--数据标题栏-->
+          <view class='leftView'>
+            <view class='inView leftblack'>监测值\环境</view>
+            <view class='inView leftblack'>pm2.5值:</view>
 
-<!-- 显示室内，室外数据-->
-   <view class='tr'>
+            <view class='inView leftblack'>pm10值:</view>
 
-   <!--数据标题栏-->
-    <view class='leftView'>
-      <view class='inView leftblack'>监测值\环境</view>
-      <view class='inView leftblack'>pm2.5值:</view>
+            <view class='inView leftblack'>co2值:</view>
 
-      <view class='inView leftblack'>pm10值:</view>
+            <view class='inView leftblack'>湿度值:</view>
 
-      <view class='inView leftblack'>co2值:</view>
+            <view class='inView leftblack'>温度值:</view>
 
-      <view class='inView leftblack'>湿度值:</view>
+            <view class='inView leftblack'>tvoc值:</view>
+          </view>
 
-      <view class='inView leftblack'>温度值:</view>
+        <!--室内-->
+          <view class='leftView'>
+            <view class='inView midblue'>室内</view>
 
-      <view class='inView leftblack'>tvoc值:</view>
-    </view>
+            <view class='inView midblue'>{{pm2}}</view>
+            
+            <view class='inView midblue'>{{pm10}}</view>
+            
+            <view class='inView midblue'>{{co2}}</view>
+            
+            <view class='inView midblue'>{{humidity}}</view>
+            
+            <view class='inView midblue'>{{temperature}}</view>
+            
+            <view class='inView midblue'>{{tvoc}}</view>
+          </view>
 
-   <!--室内-->
-    <view class='leftView'>
-      <view class='inView midblue'>室内</view>
+        <!--室外-->
+          <view class='leftView'>
+            <view class='inView rightred'>室外</view>
 
-      <view class='inView midblue'>{{pm2}}</view>
-      
-      <view class='inView midblue'>{{pm10}}</view>
-      
-      <view class='inView midblue'>{{co2}}</view>
-      
-      <view class='inView midblue'>{{humidity}}</view>
-      
-      <view class='inView midblue'>{{temperature}}</view>
-      
-      <view class='inView midblue'>{{tvoc}}</view>
-    </view>
-
-   <!--室外-->
-    <view class='leftView'>
-      <view class='inView rightred'>室外</view>
-
-      <view class='inView rightred'>{{out_pm2}}</view>
-      
-      <view class='inView rightred'>{{out_pm10}}</view>
-      
-      <view class='inView rightred'>{{out_co2}}</view>
-      
-      <view class='inView rightred'>{{out_humidity}}</view>
-      
-      <view class='inView rightred'>{{out_temperature}}</view>
-      
-      <view class='inView rightred'>{{out_tvoc}}</view>
+            <view class='inView rightred'>{{out_pm2}}</view>
+            
+            <view class='inView rightred'>{{out_pm10}}</view>
+            
+            <view class='inView rightred'>{{out_co2}}</view>
+            
+            <view class='inView rightred'>{{out_humidity}}</view>
+            
+            <view class='inView rightred'>{{out_temperature}}</view>
+            
+            <view class='inView rightred'>{{out_tvoc}}</view>
     </view>
   </view>
-
-
 </view>
 
