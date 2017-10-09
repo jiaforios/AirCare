@@ -14,27 +14,27 @@
   },
   "tabBar": {
     "color": "#a9b7b7",
-    "selectedColor": "#11cd6e",
-    "borderStyle": "white",
-    "backgroundColor": "#E6E6E6",
+    "selectedColor": "#00BFFF",
+    "borderStyle": "#00BFFF",
+    "backgroundColor": "#FFFFFF",
     "list": [
       {
         "pagePath": "pages/realTime/realTime",
         "text": "实时",
-        "iconPath": "image/realTime_unselected@2x.png",
-        "selectedIconPath": "image/realTime_selected@2x.png"
+        "iconPath": "image/realTime_unselected.png",
+        "selectedIconPath": "image/realTime_selected.png"
       },
       {
         "pagePath": "pages/history/history",
         "text": "历史",
-        "iconPath": "image/history_unselected@2x.png",
-        "selectedIconPath": "image/history_selected@2x.png"
+        "iconPath": "image/history_unselected.png",
+        "selectedIconPath": "image/history_selected.png"
       },
       {
         "pagePath": "pages/setting/setting",
         "text": "设置",
-        "iconPath": "image/setting_unselected@2x.png",
-        "selectedIconPath": "image/setting_selected@2x.png"
+        "iconPath": "image/setting_unselected.png",
+        "selectedIconPath": "image/setting_selected.png"
       }
     ]
   }
