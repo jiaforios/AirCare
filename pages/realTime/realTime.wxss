@@ -91,3 +91,89 @@ flex-direction: column;
   width: 100%;
   height: 100%;
 }
+
+
+
+
+
+
+
+.outView{
+  width: 100%;
+  height: 120px;
+  margin-top: 30px;
+  background-color: rgb(222, 93, 0);
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+}
+
+.insideView{
+  width: 100%;
+  height: 120px;
+  margin-top: 30px;
+  background-color: rgb(5, 175, 235);
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+}
+.imageView{
+  position: absolute;
+  bottom: 20px;
+  width: 200px;
+  height: 100px;
+  left: 100px;
+}
+
+.valueShow{
+  font-size: 15px;
+  color: white;
+}
+.location{
+  margin-left: 20px;
+  margin-top: 20px;
+  white-space: nowrap;
+  height: 30px;
+  font-size: 20px;
+}
+.pmvalue{
+  margin-left: 20px;
+  margin-top: 20px;
+  white-space: nowrap;
+  height: 30px;
+
+}
+.tempure{
+  font-size: 20px;
+  margin-top: 30px;
+  white-space: nowrap;
+  height: 30px;
+  text-align: center;
+}
+.pinceshow{
+  margin-top: 10px;
+  font-size: 18px;
+  text-align: center;
+  color: white;
+}
+
+.leftv{
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: 200px;
+}
+.rightv{
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.pmlabel{
+  margin-left: 20px;
+  font-size: 15px;
+}
+.pmlabelvalue{
+    margin-left: 10px;
+    font-size: 18px;
+}

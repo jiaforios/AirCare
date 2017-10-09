@@ -42,5 +42,7 @@ App({
     islogout:false,
     callPhone:null,
     handPhone:null,
+    deviceWidth:0,
+    deviceHeight:0,
   }
 })

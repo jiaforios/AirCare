@@ -22,6 +22,12 @@ Page({
       out_evaViewHeight: 0,
       inPhone:0,
       outPhone:0,
+      devicewidth:0,
+      deviceheight: 0,
+      out_color:null,
+      in_color: null,
+      out_pince:null,
+      in_pince:null,
   },
 
   /**
@@ -30,6 +36,14 @@ Page({
   onLoad: function (options) {
       var that = this
       console.log("inhone = " + app.globalData.inDeviceId);
+    wx.getSystemInfo({
+      success: function (res) {
+        that.setData({
+          devicewidth:res.windowWidth,
+          deviceheight:res.windowHeight,
+        })
+      }
+    })
 
     setInterval(function () {
       //循环执行代码  
@@ -51,6 +65,42 @@ Page({
             tvoc: res.data.data.tvoc,
             evaViewHeight:res.data.data.pm2,
           })
+
+
+          if (res.data.data.pm2<50){
+            that.setData({
+              out_color:'rgb(51,200,37)',
+              out_pince:"优",
+            })
+          } else if (res.data.data.pm2 < 100) {
+            that.setData({
+              out_color: 'rgb(154,205,50)',
+              out_pince: "良",
+            })
+          } else if (res.data.data.pm2 < 150) {
+            that.setData({
+              out_color: 'rgb(222,93,0)',
+              out_pince: "轻度污染",
+            })
+          } else if (res.data.data.pm2 < 200) {
+            that.setData({
+              out_color: 'rgb(212,0,0)',
+              out_pince: "中度污染",
+
+            })
+          } else if (res.data.data.pm2 < 300) {
+            that.setData({
+              out_color: 'rgb(153,0,169)',
+              out_pince: "重度污染",
+            })
+          }else{
+            that.setData({
+              out_color: 'rgb(129,0,38)',
+              out_pince: "严重污染",
+            })
+          }
+         
+
         }
       })
 
@@ -72,6 +122,38 @@ Page({
             out_tvoc: res.data.data.tvoc,
             out_evaViewHeight: res.data.data.pm2,
           })
+          
+          if (res.data.data.pm2 < 50) {
+            that.setData({
+              in_color: 'rgb(51,200,37)',
+              in_pince: "优",
+            })
+          } else if (res.data.data.pm2 < 100) {
+            that.setData({
+              in_color: 'rgb(154,205,50)',
+              in_pince: "良",
+            })
+          } else if (res.data.data.pm2 < 150) {
+            that.setData({
+              in_color: 'rgb(222,93,0)',
+              in_pince: "轻度污染",
+            })
+          } else if (res.data.data.pm2 < 200) {
+            that.setData({
+              in_color: 'rgb(212,0,0)',
+              in_pince: "中度污染",
+            })
+          } else if (res.data.data.pm2 < 300) {
+            that.setData({
+              in_color: 'rgb(153,0,169)',
+              in_pince: "重度污染",
+            })
+          } else {
+            that.setData({
+              in_color: 'rgb(129,0,38)',
+              in_pince: "严重污染",
+            })
+          }
         }
       })
 
@@ -126,5 +208,22 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  
+  // 根据pm2.5 数值显示结果
+  contentShowWithValue:function(value,res){
+    if (value < 50) {
+      res = 'rgb(51,200,37)'
+    } else if (value < 100) {
+        res =  'rgb(154,205,50)'
+    } else if (value < 150) {
+      res = 'rgb(222,93,0)'
+    } else if (value < 200) {
+      res = 'rgb(212,0,0)'
+    } else if (value < 300) {
+      res = 'rgb(153,0,169)'
+    } else {
+      res = 'rgb(129,0,38)'
+    }
   }
 })

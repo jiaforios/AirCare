@@ -1,5 +1,5 @@
 <!--pages/login/login.wxml-->
 <view class="container">
-    <input placeholder='请输入您的手机号' class='inputPhonePwd' bindinput='phoneInputAction'></input>
+    <input placeholder='请输入您的手机号' class='inputPhonePwd' bindinput='phoneInputAction'>16737137</input>
     <button class='loginBtn' bindtap='loginAction'>登录</button>
 </view>

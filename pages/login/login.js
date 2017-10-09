@@ -73,7 +73,6 @@ Page({
   
   },
 
-
   phoneInputAction:function(input){
      this.setData({
         phone:input.detail.value,
