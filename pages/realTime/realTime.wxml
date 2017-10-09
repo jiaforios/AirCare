@@ -1,6 +1,6 @@
 <!--pages/realTime/realTime.wxml-->
 <view style='width:100%;height:{{deviceheight}}px'>
- <image style='width:100%;height:{{deviceheight}}px' src='../../image/bg_color.jpg'> 
+ <!-- <image style='width:100%;height:{{deviceheight}}px' src='../../image/bg_color.jpg'>  -->
   <!--第一个视图 显示室外-->
     <view class='outView' style='background-color:{{out_color}}'>
        <view class='leftv'>
@@ -41,7 +41,7 @@
 
     </view>
     <!-- <image class='imageView' src='../../image/detail.png'></image>  -->
- </image> 
+ <!-- </image>  -->
    
 </view>
 
