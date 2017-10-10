@@ -37,6 +37,10 @@ Page({
    */
   onLoad: function (options) {
       var that = this
+
+    
+
+
       console.log("inhone = " + app.globalData.inDeviceId);
     wx.getSystemInfo({
       success: function (res) {
@@ -46,6 +50,7 @@ Page({
         })
       }
     })
+    
     that.setData({
       in_location: app.globalData.in_adress,
       out_location: app.globalData.out_adress
@@ -73,7 +78,6 @@ Page({
             tvoc: res.data.data.tvoc,
             evaViewHeight:res.data.data.pm2,           
           })
-
 
           if (res.data.data.pm2<50){
             that.setData({
