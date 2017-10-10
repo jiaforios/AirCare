@@ -92,12 +92,17 @@ flex-direction: column;
   height: 100%;
 }
 
-
+.upview{
+  width: 100%;
+  height: 30px;
+  margin-top: 0px;
+  background-color: #00BFFF;
+}
 
 .outView{
   width: 100%;
   height: 120px;
-  margin-top: 30px;
+  margin-top: 10px;
   background-color: rgb(222, 93, 0);
   display: flex;
   flex-direction: row;
@@ -106,7 +111,7 @@ flex-direction: column;
 .insideView{
   width: 100%;
   height: 120px;
-  margin-top: 30px;
+  margin-top: 10px;
   background-color: rgb(5, 175, 235);
   display: flex;
   flex-direction: row;
@@ -175,4 +180,8 @@ flex-direction: column;
   margin: 0px;
   width: 375px;
   height: 667px;
+}
+.downImg{
+  margin-bottom: 0px;
+  width: 100%;
 }
