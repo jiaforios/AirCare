@@ -1,5 +1,9 @@
 <!--pages/history/history.wxml-->
 <view class="container">
-    <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvasStyle" bindtouchstart="touchHandler" bindtouchmove="moveHandler" bindtouchend="touchEndHandler"></canvas>
+    <view style='width:100%;height:{{deviceheight}}px'>
+        <canvas class="canvasStyle" canvas-id="lineCanvas" disable-scroll="true" bindtouchstart="touchHandler" bindtouchmove="moveHandler" bindtouchend="touchEndHandler">
+        </canvas>
+    </view>
+  
     <!-- <button type="primary" bindtap="updateData">更新数据</button> -->
 </view>
