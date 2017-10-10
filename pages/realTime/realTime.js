@@ -81,34 +81,34 @@ Page({
 
           if (res.data.data.pm2<50){
             that.setData({
-              out_color:'rgb(51,200,37)',
-              out_pince:"优",
+              in_color:'rgb(51,200,37)',
+              in_pince:"优",
             })
           } else if (res.data.data.pm2 < 100) {
             that.setData({
-              out_color: 'rgb(154,205,50)',
-              out_pince: "良",
+              in_color: 'rgb(154,205,50)',
+              in_pince: "良",
             })
           } else if (res.data.data.pm2 < 150) {
             that.setData({
-              out_color: 'rgb(222,93,0)',
-              out_pince: "轻度污染",
+              in_color: 'rgb(222,93,0)',
+              in_pince: "轻度污染",
             })
           } else if (res.data.data.pm2 < 200) {
             that.setData({
-              out_color: 'rgb(212,0,0)',
-              out_pince: "中度污染",
+              in_color: 'rgb(212,0,0)',
+              in_pince: "中度污染",
 
             })
           } else if (res.data.data.pm2 < 300) {
             that.setData({
-              out_color: 'rgb(153,0,169)',
-              out_pince: "重度污染",
+              in_color: 'rgb(153,0,169)',
+              in_pince: "重度污染",
             })
           }else{
             that.setData({
-              out_color: 'rgb(129,0,38)',
-              out_pince: "严重污染",
+              in_color: 'rgb(129,0,38)',
+              in_pince: "严重污染",
             })
           }
          
@@ -135,33 +135,33 @@ Page({
           
           if (res.data.data.pm2 < 50) {
             that.setData({
-              in_color: 'rgb(51,200,37)',
-              in_pince: "优",
+              out_color: 'rgb(51,200,37)',
+              out_pince: "优",
             })
           } else if (res.data.data.pm2 < 100) {
             that.setData({
-              in_color: 'rgb(154,205,50)',
-              in_pince: "良",
+              out_color: 'rgb(154,205,50)',
+              out_pince: "良",
             })
           } else if (res.data.data.pm2 < 150) {
             that.setData({
-              in_color: 'rgb(222,93,0)',
-              in_pince: "轻度污染",
+              out_color: 'rgb(222,93,0)',
+              out_pince: "轻度污染",
             })
           } else if (res.data.data.pm2 < 200) {
             that.setData({
-              in_color: 'rgb(212,0,0)',
-              in_pince: "中度污染",
+              out_color: 'rgb(212,0,0)',
+              out_pince: "中度污染",
             })
           } else if (res.data.data.pm2 < 300) {
             that.setData({
-              in_color: 'rgb(153,0,169)',
-              in_pince: "重度污染",
+              out_color: 'rgb(153,0,169)',
+              out_pince: "重度污染",
             })
           } else {
             that.setData({
-              in_color: 'rgb(129,0,38)',
-              in_pince: "严重污染",
+              out_color: 'rgb(129,0,38)',
+              out_pince: "严重污染",
             })
           }
         }
