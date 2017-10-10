@@ -112,6 +112,8 @@ Page({
              app.globalData.zcodeimgurl = res.data.data.weixinQuickMark,
              app.globalData.callPhone = res.data.data.telePhone,
              app.globalData.handPhone = res.data.data.sellPhone,
+             app.globalData.in_adress = res.data.data.address,
+             app.globalData.out_adress = res.data.data.outAddress,
 
              app.globalData.islogout = "login",
                wx.switchTab({

@@ -28,6 +28,8 @@ Page({
       in_color: null,
       out_pince:null,
       in_pince:null,
+      in_location:null,
+      out_location:null
   },
 
   /**
@@ -44,11 +46,17 @@ Page({
         })
       }
     })
+    that.setData({
+      in_location: app.globalData.in_adress,
+      out_location: app.globalData.out_adress
 
+    })
+    var in_deviceid = app.globalData.inDeviceId;
+    var out_deviceid = app.globalData.outDeviceId;
     setInterval(function () {
       //循环执行代码  
       wx.request({
-        url: 'https://www.airmoniter.com/airQuality/queryAirQuality.do?deviceId=50028',
+        url: 'https://www.airmoniter.com/airQuality/queryAirQuality.do?deviceId=' + in_deviceid,
 
         header: {
           'content-type': 'application/json' // 默认值
@@ -63,7 +71,7 @@ Page({
             temperature: res.data.data.temperature,
             humidity: res.data.data.humidity,
             tvoc: res.data.data.tvoc,
-            evaViewHeight:res.data.data.pm2,
+            evaViewHeight:res.data.data.pm2,           
           })
 
 
@@ -105,14 +113,12 @@ Page({
       })
 
       wx.request({
-        url: 'https://www.airmoniter.com/airQuality/queryAirQuality.do?deviceId=50122',
+        url: 'https://www.airmoniter.com/airQuality/queryAirQuality.do?deviceId=' + out_deviceid,
 
         header: {
           'content-type': 'application/json' // 默认值
         },
         success: function (res) {
-          // console.log(res.data)
-          // console.log("返回数据为pm2：" + res.data.data.pm2);
           that.setData({
             out_pm2: res.data.data.pm2,
             out_pm10: res.data.data.pm10,

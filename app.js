@@ -44,5 +44,7 @@ App({
     handPhone:null,
     deviceWidth:0,
     deviceHeight:0,
+    in_adress:null,
+    out_adress:null,
   }
 })

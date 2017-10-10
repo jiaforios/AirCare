@@ -14,6 +14,7 @@ Page({
       inDeviceDataArr:null,
       outDeviceDataArr:null,
       deviceDataTimeArr:null,
+      ischange:0
   },
   touchHandler: function (e) {
     lineChart.scrollStart(e);
@@ -57,30 +58,8 @@ Page({
       }
 
       var dataArrin = that.data.inDeviceDataArr;
-      lineChart = new wxCharts({
-        canvasId: 'lineCanvas',
-        type: 'line',
-        categories: [0,0],
-        series: [
-          {
-            name: '室内',
-            data: [0,0],
-          }
 
-        ],
-        yAxis: {
-          title: '室内pm2.5 (ug/m3)',
-          // format: function (val) {
-          //   return val.toFixed(2);
-          // },
-          min: 0
-        },
-        enableScroll: true,
-        width: windowWidth,
-        height: 400
-      });  
-
-
+      lineChart = that.creatChart(windowWidth);
 
       var eTime = util.formatTime(new Date()); 
       var baseTime = eTime.substring(0,10);
@@ -238,5 +217,46 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+/**
+ *  显示点数据值
+ */
+  updateInfo:function(){
+    this.setData({
+      ischange:1,
+    })
+    lineChart = this.creatChart(375);
+  },
+
+  /**
+   * 创建图表
+   */
+  creatChart:function(dwidth){
+    var charts = new wxCharts({
+      canvasId: 'lineCanvas',
+      type: 'line',
+      categories: [0, 0],
+      series: [
+        {
+          name: '室内',
+          data: [0, 0],
+        }
+
+      ],
+
+      yAxis: {
+        title: '今日室内外 pm2.5 (ug/m3)',
+        // format: function (val) {
+        //   return val.toFixed(2);
+        // },
+        min: 0
+      },
+      enableScroll: true,
+      dataLabel:false,
+      width: dwidth,
+      height: 400
+    });
+    return charts;
   }
+
 })

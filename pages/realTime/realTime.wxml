@@ -4,7 +4,7 @@
   <!--第一个视图 显示室外-->
     <view class='outView' style='background-color:{{out_color}}'>
        <view class='leftv'>
-          <view class='valueShow location'>室外</view>
+          <view class='valueShow location'>{{out_location}}</view>
           <view class='valueShow pmvalue'>
             <label>PM2.5:</label>
             <label class='pmlabelvalue'>{{out_pm2}}</label>
@@ -23,7 +23,7 @@
    <!--第二个视图 显示室内-->
     <view class='insideView' style='background-color:{{in_color}}'>
        <view class='leftv'>
-          <view class='valueShow location'>室内</view>
+          <view class='valueShow location'>{{in_location}}</view>
 
           <view class='valueShow pmvalue'>
             <label>PM2.5:</label>
