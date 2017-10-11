@@ -7,6 +7,7 @@
      <view class='tips' bindtap='callAction'>电话号码:{{call}}</view>
      <view class='tips' bindtap='phoneAction'>手机号码:{{phone}}</view>
      <button class='logout' bindtap='logoutAction'>退出登录</button>
+     <view class='conpanyTips'>Copyright © 2016-2020|{{conpanyTips}}</view>
    </view>
 
 </view>

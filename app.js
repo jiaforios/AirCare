@@ -46,5 +46,6 @@ App({
     deviceHeight:0,
     in_adress:null,
     out_adress:null,
+    conpanyTips:null
   }
 })

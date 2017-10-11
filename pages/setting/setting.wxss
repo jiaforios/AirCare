@@ -23,3 +23,9 @@
   color: black;
   margin-top: 30px;
 }
+.conpanyTips{
+  font-size: 12px;
+  text-align: center;
+  color: black;
+  margin-top: 50px;
+}

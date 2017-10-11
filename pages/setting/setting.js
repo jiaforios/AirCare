@@ -9,6 +9,7 @@ Page({
     zcodeimgurlstr:null,
     call:null,
     phone:null,
+    conpanyTips:null
   },
 
   /**
@@ -18,7 +19,8 @@ Page({
   this.setData({
     zcodeimgurlstr: app.globalData.zcodeimgurl,
     call: app.globalData.callPhone,
-    phone: app.globalData.handPhone
+    phone: app.globalData.handPhone,
+    conpanyTips: app.globalData.conpanyTips
   })
   },
 

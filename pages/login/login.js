@@ -114,7 +114,7 @@ Page({
              app.globalData.handPhone = res.data.data.sellPhone,
              app.globalData.in_adress = res.data.data.address,
              app.globalData.out_adress = res.data.data.outAddress,
-
+             app.globalData.conpanyTips = res.data.data.companyName,
              app.globalData.islogout = "login",
                wx.switchTab({
                  url: '../realTime/realTime',
