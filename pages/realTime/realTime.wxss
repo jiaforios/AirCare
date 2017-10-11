@@ -97,13 +97,15 @@ flex-direction: column;
   height: 30px;
   margin-top: 0px;
   background-color: #00BFFF;
+  display: flex;
+  flex-direction: row;
 }
 
 .outView{
   width: 100%;
   height: 120px;
-  margin-top: 10px;
-  background-color: rgb(222, 93, 0);
+  margin-top: 0px;
+  background-color: rgb(210, 210, 210);
   display: flex;
   flex-direction: row;
 }
@@ -111,8 +113,8 @@ flex-direction: column;
 .insideView{
   width: 100%;
   height: 120px;
-  margin-top: 10px;
-  background-color: rgb(5, 175, 235);
+  margin-top: 0px;
+  background-color: rgb(210, 210, 210);
   display: flex;
   flex-direction: row;
 }
@@ -184,4 +186,38 @@ flex-direction: column;
 .downImg{
   margin-bottom: 0px;
   width: 100%;
+}
+.slide-image{  
+    width: 150px; 
+    height: 150px;
+}
+.descContent{
+  width: 100%;
+  text-align: right;
+  color: white;
+  height: 20px;
+  font-size: 15px;
+  margin-top: 5px;
+  margin-right: 20px;
+}
+.locontent{
+  width: 100%;
+  text-align: center;
+  color: white;
+  height: 20px;
+  font-size: 14px;
+  margin-top: 6px;
+  margin-left: 20px;
+}
+.outdesc{
+  width: 100%;
+  height: 30px;
+  background-color: rgb(5, 175, 235);
+  display: flex;
+  flex-direction: row;
+}
+.downviews{
+  margin: 20px;
+  font-size: 13px;
+  color: grey;
 }

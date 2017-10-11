@@ -29,7 +29,26 @@ Page({
       out_pince:null,
       in_pince:null,
       in_location:null,
-      out_location:null
+      out_location:null,
+      bannerDesc:'新风净化系统',
+      imgUrls: [
+        {
+          desc:'新风净化系统',
+          url: 'http://www.smart029.com/skin/images/one.png'
+        }, {
+          desc:'中央吸层系统',
+          url: 'http://www.smart029.com/skin/images/two.png'
+        }, {
+          desc:'全屋净水系统',
+          url: 'http://www.smart029.com.img.800cdn.com/skin/images/three.png'
+        }
+      ],
+      indicatorDots: true,
+      autoplay: true,
+      interval: 5000,
+      duration: 1000,
+      circular:true,
+      userInfo: {}
   },
 
   /**
@@ -235,5 +254,36 @@ Page({
     } else {
       res = 'rgb(129,0,38)'
     }
+  },
+  pageChangeAction: function(event){
+     var that = this;
+     switch (event.detail.current){
+        case 0:{
+          that.setData({
+            bannerDesc:'新风净化系统'
+          })
+        }
+        break;
+        case 1: {
+          that.setData({
+            bannerDesc: '中央吸层系统'
+          })
+        }
+          break;
+        case 2: {
+          that.setData({
+            bannerDesc: '全屋净化系统'
+          })
+        }
+          break;
+
+     }
+  },
+
+
+  phoneAction:function(){
+
+
   }
+
 })

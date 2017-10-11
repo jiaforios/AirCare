@@ -1,9 +1,26 @@
 <!--pages/realTime/realTime.wxml-->
-<view style='width:100%;height:{{deviceheight}}px'>
+<view class='upview'>
+  <label class='descContent'>{{bannerDesc}}</label>
+</view>
+
+<swiper indicator-dots="{{indicatorDots}}" indicator-active-color='#00BFFF'  
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="circular" bindchange="pageChangeAction">  
+      <block wx:for="{{imgUrls}}" wx:key="key">  
+        <swiper-item>  
+           <navigator hover-class="navigator-hover">  
+            <image src="{{item.url}}" class="slide-image" width='{{devicewidth}}' height="150" style='margin-left: {{(devicewidth-150)/2}}px'/>
+           </navigator>   
+
+        </swiper-item>  
+      </block>  
+</swiper>
+
+<view style='width:100%;height:{{deviceheight-150}}px'>
  <!-- <image style='width:100%;height:{{deviceheight}}px' src='../../image/bg_color.jpg'>  -->
-    <view class='upview'>
-    </view>
   <!--第一个视图 显示室外-->  
+  <view class='outdesc'>
+    <label class='locontent'>室外监测点</label>
+  </view>
     <view class='outView' style='background-color:{{out_color}}'>
        <view class='leftv'>
           <view class='valueShow location'>{{out_location}}</view>
@@ -21,7 +38,9 @@
        </view>
     </view>
    
-
+<view class='outdesc'>
+    <label class='locontent'>室内监测点</label>
+  </view>
    <!--第二个视图 显示室内-->
     <view class='insideView' style='background-color:{{in_color}}'>
        <view class='leftv'>
@@ -43,9 +62,11 @@
 
     </view>
     <!-- <image class='imageView' src='../../image/detail.png'></image>  -->
- <!-- </image>  -->
-    <view class='downImg'>
-      <image src='../../image/KED.png' style='width:375px'></image>
-    </view>
+ <!-- </image>  --> 
+ <view class='downviews'>
+PM2.5是指大气中直径小于或等于2.5微米的颗粒物，也称为可入肺颗粒物。虽然PM2.5只是地球大气成分中含量很少的组分，但它对空气质量和能见度等有重要的影响。PM2.5粒径小，富含大量的有毒、有害物质且在大气中的停留时间长、输送距离远，因而对人体健康和大气环境质量的影响更大。
+ </view>
+
 </view>
+
 
