@@ -3,7 +3,6 @@
     "pages/login/login",
     "pages/logs/logs",
     "pages/realTime/realTime",
-    "pages/history/history",
     "pages/setting/setting"
   ],
   "window": {
@@ -24,12 +23,7 @@
         "iconPath": "image/realTime_unselected.png",
         "selectedIconPath": "image/realTime_selected.png"
       },
-      {
-        "pagePath": "pages/history/history",
-        "text": "历史",
-        "iconPath": "image/history_unselected.png",
-        "selectedIconPath": "image/history_selected.png"
-      },
+    
       {
         "pagePath": "pages/setting/setting",
         "text": "关于",
