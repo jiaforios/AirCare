@@ -57,8 +57,6 @@ Page({
   onLoad: function (options) {
       var that = this
 
-    
-
 
       console.log("inhone = " + app.globalData.inDeviceId);
     wx.getSystemInfo({

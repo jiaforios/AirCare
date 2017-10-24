@@ -4,39 +4,41 @@
  <!-- <image style='width:100%;height:{{deviceheight}}px' src='../../image/bg_color.jpg'>  -->
   <!--第一个视图 显示室外-->  
     <view class='outView' style='background-color:{{out_color}};height:{{(deviceheight-30)/2.0}}px'>
-       <view class='leftv'>
-          <view class='valueShow location'>{{out_location}}</view>
-          <view class='valueShow pmvalue'>
-            <label>PM2.5:</label>
-            <label class='pmlabelvalue'>{{out_pm2}}</label>
-            <label class='pmlabel'>PM10:</label>
-            <label class='pmlabelvalue'>{{out_pm10}}</label>
-          </view>
-       </view>
 
-       <view class='rightv' style='width:{{devicewidth-200}}px'>
-          <view class='valueShow tempure'>{{out_temperature}}℃</view>
-          <view class='pinceshow'>{{out_pince}}</view>
-       </view>
+
+      <view class='onOne'>
+          <label class='location_'>{{out_location}}</label>
+      </view>
+
+      <view class='onTwo'>
+          <label class='pm2_'>{{out_pm2}}</label>
+          <label class='pm2_ug'>ug/m3</label>
+      </view>
+      <view class='onThree'>
+          <label class='tem_hum'>温度：{{out_temperature}}℃</label>          
+           <label class='tem_hum'>湿度：{{out_humidity}}%</label>
+      </view>
+
+
     </view>
    <!--第二个视图 显示室内-->
     <view class='insideView' style='background-color:{{in_color}};height:{{(deviceheight-30)/2.0}}px'>
     
-       <view class='leftv'>
-          <view class='valueShow location'>{{in_location}}</view>
 
-          <view class='valueShow pmvalue'>
-            <label>PM2.5:</label>
-            <label class='pmlabelvalue'>{{pm2}}</label>
-            <label class='pmlabel'>PM10:</label>
-            <label class='pmlabelvalue'>{{pm10}}</label>
-          </view>
-       </view>
+      <view class='onOne'>
+          <label class='location_'>{{in_location}}</label>
+      </view>
 
-       <view class='rightv' style='width:{{devicewidth-200}}px'>
-          <view class='valueShow tempure'>{{temperature}} ℃</view>
-          <view class='pinceshow'>{{in_pince}}</view>
-       </view>
+      <view class='onTwo'>
+          <label class='pm2_'>{{pm2}}</label>
+          <label class='pm2_ug'>ug/m3</label>
+      </view>
+      <view class='onThree'>
+          <label class='tem_hum'>温度：{{temperature}}℃</label>          
+           <label class='tem_hum'>湿度：{{humidity}}%</label>
+      </view>
+
+
 
     </view>
     <!-- <image class='imageView' src='../../image/detail.png'></image>  -->

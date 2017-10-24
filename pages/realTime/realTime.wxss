@@ -1,105 +1,4 @@
 /* pages/realTime/realTime.wxss */
-.leftView{
-background: white;
-margin-left: 10px;
-margin-top: 20px;
-margin-right: 10px;
-width: 100px;
-height: 300px;
-flex-direction: column;
-}
-.inView{
-  margin-top: 20px;
-  justify-content: flex-end;
-}
-.datainfo{
-  font-size: 13px;
-  width: 100px;
-  height: 30px;
-  margin-top: 10px;
-}
-.tr{
-  display: flex;
-  margin-top: 150px;
-  justify-content: center;
-}
-.leftblack{
-  color: black;
-  font-size: 15px;
-  text-align: right;
-}
-.midblue{
-    color:rgb(5, 175, 235);
-    font-size: 15px;
-    text-align: center;
-}
-.rightred{
-  color: red;
-  font-size: 15px;
-  text-align: center;
-}
-
-.evaluating{
-  /* background: rgb(235, 235, 235,0); */
-  width: 100%;
-  height: 150px;
-  display: flex;
-  flex-direction: row;
-   position: absolute; 
-  top: 30px;
-}
-.evaView{
-  width: 40px;
-  background: rgb(5, 175, 235);
-  position: absolute; 
-  bottom: 0px;
-}
-.evaViewOut{
-  width: 40px;
-  background: red;
-  position: absolute; 
-  bottom: 0px;
-  left: 100px;
-}
-
-.colorlevelView{
-  position: absolute;
-  justify-content: flex-end;
-  right: 100px;
-  width: 30px;
-  height: 100%;
-}
-.colorValueView{
- position: absolute;
- justify-content: flex-end;
-  right: 20px;
-  width: 80px;
-  height: 100%;
-}
-
-.colorlevel{
-  width: 30px;
-  height: 25px;
-}
-.coloeDesc{
-  font-size: 13px;
-  height: 25px;
-  text-align: center;
-}
-
-.imgsize{
-  width: 100%;
-  height: 100%;
-}
-
-.upview{
-  width: 100%;
-  height: 30px;
-  margin-top: 0px;
-  background-color: #00BFFF;
-  display: flex;
-  flex-direction: row;
-}
 
 .outView{
   width: 100%;
@@ -107,7 +6,7 @@ flex-direction: column;
   margin-top: 10px;
   background-color: rgb(210, 210, 210);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .insideView{
@@ -116,108 +15,51 @@ flex-direction: column;
   margin-top: 10px;
   background-color: rgb(210, 210, 210);
   display: flex;
-  flex-direction: row;
-}
-.imageView{
-  position: absolute;
-  bottom: 20px;
-  width: 200px;
-  height: 100px;
-  left: 100px;
+  flex-direction: column;
 }
 
-.valueShow{
-  font-size: 15px;
-  color: white;
-}
-.location{
-  margin-left: 20px;
-  margin-top: 20px;
-  white-space: nowrap;
-  height: 30px;
-  font-size: 20px;
-}
-.pmvalue{
-  margin-left: 20px;
-  margin-top: 20px;
-  white-space: nowrap;
-  height: 30px;
-
-}
-.tempure{
-  font-size: 20px;
-  margin-top: 30px;
-  white-space: nowrap;
-  height: 30px;
+.onOne{
+  flex: 1;
   text-align: center;
 }
-.pinceshow{
-  margin-top: 10px;
-  font-size: 18px;
+.onTwo{
+  flex: 1;
   text-align: center;
-  color: white;
-}
 
-.leftv{
-  margin-left: 0px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  width: 200px;
 }
-.rightv{
-  margin-right: 0px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.pmlabel{
-  margin-left: 20px;
-  font-size: 15px;
-}
-.pmlabelvalue{
-    margin-left: 10px;
-    font-size: 18px;
-}
-.canvas{
-  margin: 0px;
-  width: 375px;
-  height: 667px;
-}
-.downImg{
-  margin-bottom: 0px;
-  width: 100%;
-}
-.slide-image{  
-    width: 150px; 
-    height: 150px;
-}
-.descContent{
-  width: 100%;
-  text-align: right;
-  color: white;
-  height: 20px;
-  font-size: 15px;
-  margin-top: 5px;
-  margin-right: 20px;
-}
-.locontent{
-  width: 100%;
-  text-align: center;
-  color: white;
-  height: 20px;
-  font-size: 14px;
-  margin-top: 6px;
-  margin-left: 20px;
-}
-.outdesc{
-  width: 100%;
-  height: 30px;
-  background-color: rgb(5, 175, 235);
+.onThree{
+  flex: 1;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
-.downviews{
-  margin: 20px;
+.location_{
+  font-size: 20px;
+  color: white;
+  position: relative;
+  top: 30%;
+}
+.pm2_{
+  font-size: 30px;
+  color: white;
+  position: relative;
+  top: 10%;
+}
+.pm2_ug{
   font-size: 13px;
-  color: grey;
+  color: white;
+   position: relative;
+  top: 10%;
+}
+.tem_hum{
+  font-size: 17px;
+  color: white;
+  position: relative;
+  top: 20%;
+}
+.tem_hum_value{
+  font: 20px;
+  color: white;
+  position: relative;
+  top: 20%;
 }

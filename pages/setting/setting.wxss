@@ -7,7 +7,7 @@
 .inView{
   display: flex;
   flex-direction: column;
-   align-items: center;
+  width: 100%;
 }
 .phoneCall{
   text-decoration: underline;
@@ -28,4 +28,62 @@
   text-align: center;
   color: black;
   margin-top: 50px;
+}
+
+.line{
+  background-color: rgb(210, 210, 210);
+  height: 2px;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+.title{
+  font-size: 18px;
+  color: grey;
+}
+.desc{
+  font-size: 15px;
+  color: grey;
+  margin-top: 5px;
+}
+.imger{
+  width: 30px;
+  height: 30px;
+}
+.titleView{
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+.label{
+  text-align: center;
+  padding-top: 5px;
+  font-size: 16px;
+  color: grey;
+}
+.subV{
+  height: 44px;
+  margin-left: 15px;
+  display: flex;
+  flex-direction: row;
+}
+.firstTop{
+  margin-top: 20px;
+}
+
+.hotgoodcontainer{
+    display:flex;
+    flex-wrap: wrap;
+    width:100%;
+}
+.gooditem{
+    width:33.333333%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font-size:12px;
+    box-sizing:border-box;
+    border: 0.5px solid #fff;
+    padding-bottom:10px
 }

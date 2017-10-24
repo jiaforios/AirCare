@@ -1,13 +1,48 @@
 <!--pages/mine/mine.wxml-->
-<view class='container'>
 
   <view class='inView'>
-     <view class='tips'>控制室内空气质量--污染物数据可视化</view>
+     <!-- <view class='tips'>控制室内空气质量--污染物数据可视化</view>
      <image class='img' src='{{zcodeimgurlstr}}'></image>
      <view class='tips' bindtap='callAction'>电话号码:{{call}}</view>
      <view class='tips' bindtap='phoneAction'>手机号码:{{phone}}</view>
      <button class='logout' bindtap='logoutAction'>退出登录</button>
-     <view class='conpanyTips'>Copyright © 2016-2020|{{conpanyTips}}</view>
-   </view>
+     <view class='conpanyTips'>Copyright © 2016-2020|{{conpanyTips}}</view> -->
 
-</view>
+     <view class='titleView'>
+         <label class='title'>西安智尔森科技有限公司</label>
+         <label class='desc'>空气加湿净化，新风系统</label>
+     </view>
+
+     <view class='line'></view>
+
+
+    <view>
+      <view class='subV firstTop'>
+        <image class='imger' src='../../image/location.png'></image>
+        <label class='label'>陕西省西安市曲江新区梧桐苑</label>
+      </view>
+
+      <view class='subV'>
+        <image class='imger' src='../../image/time.png'></image>
+        <label class='label'>9:00-22:00</label>
+      </view>
+
+      <view class='subV'>
+        <image class='imger' src='../../image/call.png'></image>
+        <label class='label'>{{call}}</label>
+      </view>
+
+      <view class='subV'>
+        <image class='imger' src='../../image/phones.png'></image>
+        <label class='label'>{{phone}}</label>
+      </view>
+    </view>
+    <view class='hotgoodcontainer'>
+        <view wx:for="{{imgList}}" wx:for-item="image" class="gooditem">  
+            <image  src="{{image}}" data-src="{{image}}" bindtap="previewImage" style='width:{{(devicewidth-40)/3.0}}px;height:{{(devicewidth-40)/3.0}}px'></image>  
+        </view> 
+    </view>
+   
+
+   
+   </view>

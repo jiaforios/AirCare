@@ -9,13 +9,24 @@ Page({
     zcodeimgurlstr:null,
     call:null,
     phone:null,
-    conpanyTips:null
+    conpanyTips:null,
+    devicewidth:0,
+    deviceheight:0,
+    imgList: ['../../image/1.jpeg', '../../image/2.jpeg', '../../image/3.jpeg', '../../image/4.jpeg', '../../image/5.jpeg', '../../image/6.jpeg',]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.getSystemInfo({
+      success: function (res) {
+        that.setData({
+          devicewidth: res.windowWidth,
+          deviceheight: res.windowHeight,
+        })
+      }
+    })
   this.setData({
     zcodeimgurlstr: app.globalData.zcodeimgurl,
     call: app.globalData.callPhone,
@@ -100,5 +111,12 @@ Page({
     wx.makePhoneCall({
       phoneNumber: that.data.phone,
     })
+  },
+  previewImage: function(e){
+    var current = e.target.dataset.src;
+    wx.previewImage({
+      current: current, // 当前显示图片的http链接  
+      urls: this.data.imgList // 需要预览的图片http链接列表  
+    }) 
   }
 })

@@ -13,7 +13,14 @@
 	"condition": {
 		"weapp": {
 			"current": -1,
-			"list": []
+			"list": [
+				{
+					"id": -1,
+					"name": "Two",
+					"pathName": "pages/setting/setting",
+					"query": ""
+				}
+			]
 		},
 		"search": {
 			"current": -1,
