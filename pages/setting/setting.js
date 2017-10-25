@@ -103,6 +103,12 @@ Page({
       },1000)
   },
 
+  mapAction: function(){
+
+    wx.navigateTo({
+      url: '../map/map',
+    })
+  },
   callAction:function(){
     var that = this;
     wx.makePhoneCall({

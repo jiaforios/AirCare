@@ -18,7 +18,8 @@
     <view>
       <view class='subV firstTop'>
         <image class='imger' src='../../image/location.png'></image>
-        <label class='label'>陕西省西安市曲江新区梧桐苑</label>
+        <label class='label'bindtap='mapAction'>陕西省西安市曲江新区梧桐苑</label>
+        <image class='imger' src='../../image/arrows_r.png'></image>
       </view>
 
       <view class='subV'>
@@ -28,12 +29,14 @@
 
       <view class='subV'>
         <image class='imger' src='../../image/call.png'></image>
-        <label class='label'>{{call}}</label>
+        <label class='label' bindtap='callAction'>{{call}}</label>
+        <image class='imger' src='../../image/arrows_r.png'></image>
       </view>
 
       <view class='subV'>
         <image class='imger' src='../../image/phones.png'></image>
-        <label class='label'>{{phone}}</label>
+        <label class='label' bindtap='phoneAction'>{{phone}}</label>
+        <image class='imger' src='../../image/arrows_r.png'></image>
       </view>
 
        <view class='subV'>

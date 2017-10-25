@@ -3,7 +3,8 @@
     "pages/login/login",
     "pages/logs/logs",
     "pages/realTime/realTime",
-    "pages/setting/setting"
+    "pages/setting/setting",
+    "pages/map/map"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -23,7 +24,6 @@
         "iconPath": "image/realTime_unselected.png",
         "selectedIconPath": "image/realTime_selected.png"
       },
-    
       {
         "pagePath": "pages/setting/setting",
         "text": "关于",
