@@ -12,6 +12,7 @@ Page({
     conpanyTips:null,
     devicewidth:0,
     deviceheight:0,
+    picWidth:0,
     imgList: ['../../image/1.jpeg', '../../image/2.jpeg', '../../image/3.jpeg', '../../image/4.jpeg', '../../image/5.jpeg', '../../image/6.jpeg',]
   },
 
@@ -19,11 +20,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
     wx.getSystemInfo({
       success: function (res) {
         that.setData({
           devicewidth: res.windowWidth,
           deviceheight: res.windowHeight,
+          picWidth: (res.windowWidth-70)/3.0
         })
       }
     })

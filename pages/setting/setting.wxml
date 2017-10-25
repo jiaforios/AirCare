@@ -15,7 +15,6 @@
 
      <view class='line'></view>
 
-
     <view>
       <view class='subV firstTop'>
         <image class='imger' src='../../image/location.png'></image>
@@ -36,10 +35,15 @@
         <image class='imger' src='../../image/phones.png'></image>
         <label class='label'>{{phone}}</label>
       </view>
+
+       <view class='subV'>
+        <image class='imger' src='../../image/pics.png'></image>
+        <label class='label'>装修案例</label>
+      </view>
     </view>
     <view class='hotgoodcontainer'>
         <view wx:for="{{imgList}}" wx:for-item="image" class="gooditem">  
-            <image  src="{{image}}" data-src="{{image}}" bindtap="previewImage" style='width:{{(devicewidth-40)/3.0}}px;height:{{(devicewidth-40)/3.0}}px'></image>  
+            <image src="{{image}}" data-src="{{image}}" bindtap="previewImage" style='width:{{picWidth}}px;height:{{picWidth}}px'></image>  
         </view> 
     </view>
    
