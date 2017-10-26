@@ -13,7 +13,7 @@ Page({
     devicewidth:0,
     deviceheight:0,
     picWidth:0,
-    imgList: ['../../image/1.jpeg', '../../image/2.jpeg', '../../image/3.jpeg', '../../image/4.jpeg', '../../image/5.jpeg', '../../image/6.jpeg',]
+    imgList: ['http://www.smart029.com.img.800cdn.com/images/7.jpg', 'http://www.smart029.com.img.800cdn.com/images/8.jpg', 'http://www.smart029.com.img.800cdn.com/images/9.jpg', 'http://www.smart029.com.img.800cdn.com/images/10.jpg', 'http://www.smart029.com.img.800cdn.com/images/11.jpg', 'http://www.smart029.com.img.800cdn.com/images/12.jpg', 'http://www.smart029.com.img.800cdn.com/images/1.jpg', 'http://www.smart029.com.img.800cdn.com/images/2.jpg', 'http://www.smart029.com.img.800cdn.com/images/3.jpg', 'http://www.smart029.com.img.800cdn.com/images/4.jpg', 'http://www.smart029.com.img.800cdn.com/images/5.jpg', 'http://www.smart029.com.img.800cdn.com/images/6.jpg', ]
   },
 
   /**

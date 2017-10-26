@@ -1,12 +1,21 @@
 /* pages/login/login.wxss */
 
 .inputPhonePwd{
-  border: 1rpx solid lightgray;
+  border-bottom: 1rpx solid lightgray;
   font-size: 13px;
   margin-top: 130px;
   height: 40px;
   width: 200px;
   border-radius: 10px;
+  text-align: center;
+}
+.logintry{
+  margin-top: 20px;
+  height: 44px;
+  width: 200px;
+  font-size: 15px;
+  background-color: rgb(5, 175, 235);
+  color: white;
 }
 .loginBtn{
   margin-top: 20px;

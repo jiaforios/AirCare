@@ -124,5 +124,54 @@ Page({
         }
       })
    
+  },
+
+  tryAction:function(){
+
+    var that = this;
+    console.log("登录操作 " + that.data.phone)
+    // wx.navigateTo({
+    //   url: '../realTime/realTime',
+    // })
+    wx.showLoading({
+      title: '登录中',
+    })
+
+    wx.request({
+      url: 'https://www.airmoniter.com/airQuality/queryCompanyInfo.do?phone=18092289782',
+
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        // console.log(res.data)
+        // console.log("返回数据为pm2：" + res.data.data.pm2);
+        var resultdata = res.data.data;
+        //  wx.hideLoading();
+        if (resultdata == null) {
+          wx.showToast({
+            title: '登录失败，该手机号未注册设备！',
+            duration: 3000,
+          })
+        } else {
+          wx.setStorageSync('userPhone', that.data.phone);
+          app.globalData.inDeviceId = res.data.data.deviceId,
+            app.globalData.outDeviceId = res.data.data.outDeviceId,
+            app.globalData.zcodeimgurl = res.data.data.weixinQuickMark,
+            app.globalData.callPhone = res.data.data.telePhone,
+            app.globalData.handPhone = res.data.data.sellPhone,
+            app.globalData.in_adress = res.data.data.address,
+            app.globalData.out_adress = res.data.data.outAddress,
+            app.globalData.conpanyTips = res.data.data.companyName,
+            app.globalData.islogout = "logout",
+            wx.switchTab({
+              url: '../realTime/realTime',
+            })
+        }
+
+      }
+    })
+
   }
+
 })

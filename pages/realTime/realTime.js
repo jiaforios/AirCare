@@ -56,8 +56,6 @@ Page({
    */
   onLoad: function (options) {
       var that = this
-
-
       console.log("inhone = " + app.globalData.inDeviceId);
     wx.getSystemInfo({
       success: function (res) {
@@ -192,7 +190,32 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    const ctx = wx.createCanvasContext('myCanvas')
+    ctx.beginPath()
+    ctx.setLineWidth(0.5)
+    ctx.moveTo(0, 2)
+    ctx.lineTo(170, 2)
+    ctx.stroke()
+
+    ctx.beginPath()
+    ctx.setLineWidth(0.5)
+    ctx.moveTo(0, 7)
+    ctx.lineTo(180, 7)
+    ctx.stroke()
+
+    ctx.beginPath()
+    ctx.setLineWidth(0.5)
+    ctx.moveTo(170, 2)
+    ctx.lineTo(180, 7)
+    ctx.stroke()
+
+    ctx.beginPath()
+    ctx.setLineWidth(0.5)
+    ctx.moveTo(180, 7)
+    ctx.lineTo(this.data.devicewidth, 7)
+    ctx.stroke()
+
+    ctx.draw()
   },
 
   /**

@@ -4,13 +4,14 @@
     "pages/logs/logs",
     "pages/realTime/realTime",
     "pages/setting/setting",
-    "pages/map/map"
+    "pages/map/map",
+    "pages/logout/logout"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#00BFFF",
+    "navigationBarBackgroundColor": "white",
     "navigationBarTitleText": "新风监测系统",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#a9b7b7",
@@ -27,6 +28,12 @@
       {
         "pagePath": "pages/setting/setting",
         "text": "关于",
+        "iconPath": "image/setting_unselected.png",
+        "selectedIconPath": "image/setting_selected.png"
+      },
+      {
+        "pagePath": "pages/logout/logout",
+        "text": "退出",
         "iconPath": "image/setting_unselected.png",
         "selectedIconPath": "image/setting_selected.png"
       }
