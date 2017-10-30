@@ -85,6 +85,15 @@ Page({
     // wx.navigateTo({
     //   url: '../realTime/realTime',
     // })
+    
+    if(that.data.phone == null){
+      wx.showToast({
+        title: '请输入手机号！',
+        duration: 2000,
+      })
+      return;
+    }
+
      wx.showLoading({
        title: '登录中',
      })
