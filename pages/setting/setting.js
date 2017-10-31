@@ -53,7 +53,7 @@ Page({
     ctx.beginPath()
     ctx.setFontSize(20)
     ctx.setFillStyle('black')
-    ctx.fillText('新风监测系统', 10, 20)
+    ctx.fillText('新风监测系统', 30, 20)
     ctx.stroke()
 
     // 上线
@@ -86,7 +86,6 @@ Page({
     ctx.setFillStyle('black')
     ctx.fillText(this.data.dataTime, this.data.devicewidth - 100, 32)
     ctx.stroke()
-
 
     ctx.draw()
   },
