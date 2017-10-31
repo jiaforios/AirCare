@@ -1,5 +1,7 @@
 // pages/realTime/realTime.js
 var app = getApp();
+var util = require('../../utils/util.js');  
+
 Page({
 
   /**
@@ -48,6 +50,7 @@ Page({
       interval: 5000,
       duration: 1000,
       circular:true,
+      dataTime:null,
       userInfo: {}
   },
 
@@ -57,6 +60,9 @@ Page({
   onLoad: function (options) {
       var that = this
       console.log("inhone = " + app.globalData.inDeviceId);
+      var eTime = util.formatTime(new Date());
+      this.data.dataTime = eTime.substring(0, 10);
+
     wx.getSystemInfo({
       success: function (res) {
         that.setData({
@@ -193,27 +199,34 @@ Page({
     const ctx = wx.createCanvasContext('myCanvas')
     ctx.beginPath()
     ctx.setLineWidth(0.5)
-    ctx.moveTo(0, 2)
-    ctx.lineTo(170, 2)
-    ctx.stroke()
-
-    ctx.beginPath()
-    ctx.setLineWidth(0.5)
     ctx.moveTo(0, 7)
-    ctx.lineTo(180, 7)
+    ctx.lineTo(170, 7)
     ctx.stroke()
 
     ctx.beginPath()
     ctx.setLineWidth(0.5)
-    ctx.moveTo(170, 2)
-    ctx.lineTo(180, 7)
+    ctx.moveTo(0, 12)
+    ctx.lineTo(180, 12)
     ctx.stroke()
 
     ctx.beginPath()
     ctx.setLineWidth(0.5)
-    ctx.moveTo(180, 7)
-    ctx.lineTo(this.data.devicewidth, 7)
+    ctx.moveTo(170, 7)
+    ctx.lineTo(180, 12)
     ctx.stroke()
+
+    ctx.beginPath()
+    ctx.setLineWidth(0.5)
+    ctx.moveTo(180, 12)
+    ctx.lineTo(this.data.devicewidth, 12)
+    ctx.stroke()
+    
+    ctx.beginPath()
+    ctx.setFontSize(13)
+    ctx.setFillStyle('black')
+    ctx.fillText(this.data.dataTime, this.data.devicewidth - 100,10)
+    ctx.stroke()
+
 
     ctx.draw()
   },

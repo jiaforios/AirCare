@@ -3,27 +3,31 @@
 .inputPhonePwd{
   border-bottom: 1rpx solid lightgray;
   font-size: 13px;
-  margin-top: 130px;
+  margin-top: 100px;
   height: 40px;
-  width: 200px;
+  width: 250px;
   border-radius: 10px;
   text-align: center;
 }
 .logintry{
   margin-top: 20px;
-  height: 44px;
-  width: 200px;
+  height: 40px;
+  width: 250px;
   font-size: 15px;
   color: rgb(5, 175, 235);
-  padding-top: 5px;
 }
 .loginBtn{
   margin-top: 20px;
-  height: 44px;
-  width: 200px;
+  height: 40px;
+  width: 250px;
   background-color: rgb(5, 175, 235);
   color: white;
 }
 .bglogin{
   margin: 0px;
+}
+.image{
+  width: 50px;
+  height: 50px;
+
 }

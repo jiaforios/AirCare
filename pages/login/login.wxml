@@ -1,5 +1,6 @@
 <!--pages/login/login.wxml-->
 <view class="container">
+    <image class='image' src='../../image/icon_.png'></image>
     <input placeholder='请输入您的手机号' class='inputPhonePwd' bindinput='phoneInputAction' value='{{phone}}'></input>
     <button class='loginBtn' bindtap='loginAction'>登录</button>
     <button class='logintry' bindtap='tryAction'>没有账号？体验一下</button>    

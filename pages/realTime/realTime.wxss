@@ -63,3 +63,10 @@
   position: relative;
   top: 20%;
 }
+
+.date{
+  margin-top: 10px;
+  margin-left: 200px;
+  width: 100px;
+  height: 20px;
+}
