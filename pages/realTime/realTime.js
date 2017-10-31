@@ -197,34 +197,43 @@ Page({
    */
   onReady: function () {
     const ctx = wx.createCanvasContext('myCanvas')
+
+// 新风监测
     ctx.beginPath()
-    ctx.setLineWidth(0.5)
-    ctx.moveTo(0, 7)
-    ctx.lineTo(170, 7)
+    ctx.setFontSize(20)
+    ctx.setFillStyle('black')
+    ctx.fillText('新风监测系统', 10, 20)
     ctx.stroke()
 
+// 上线
     ctx.beginPath()
     ctx.setLineWidth(0.5)
-    ctx.moveTo(0, 12)
-    ctx.lineTo(180, 12)
+    ctx.moveTo(0, 25)
+    ctx.lineTo(170, 25)
     ctx.stroke()
-
+//下线
     ctx.beginPath()
     ctx.setLineWidth(0.5)
-    ctx.moveTo(170, 7)
-    ctx.lineTo(180, 12)
+    ctx.moveTo(0, 30)
+    ctx.lineTo(180, 30)
     ctx.stroke()
-
+//斜线
     ctx.beginPath()
     ctx.setLineWidth(0.5)
-    ctx.moveTo(180, 12)
-    ctx.lineTo(this.data.devicewidth, 12)
+    ctx.moveTo(170, 25)
+    ctx.lineTo(190, 35)
     ctx.stroke()
-    
+// 后段线
+    ctx.beginPath()
+    ctx.setLineWidth(0.5)
+    ctx.moveTo(190, 35)
+    ctx.lineTo(this.data.devicewidth, 35)
+    ctx.stroke()
+// 日期
     ctx.beginPath()
     ctx.setFontSize(13)
     ctx.setFillStyle('black')
-    ctx.fillText(this.data.dataTime, this.data.devicewidth - 100,10)
+    ctx.fillText(this.data.dataTime, this.data.devicewidth - 100,32)
     ctx.stroke()
 
 

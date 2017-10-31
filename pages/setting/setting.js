@@ -1,5 +1,7 @@
 // pages/mine/mine.js
 var app = getApp();
+var util = require('../../utils/util.js');  
+
 Page({
 
   /**
@@ -13,6 +15,7 @@ Page({
     devicewidth:0,
     deviceheight:0,
     picWidth:0,
+    dataTime:null,
     imgList: ['http://www.smart029.com.img.800cdn.com/images/7.jpg', 'http://www.smart029.com.img.800cdn.com/images/8.jpg', 'http://www.smart029.com.img.800cdn.com/images/9.jpg', 'http://www.smart029.com.img.800cdn.com/images/10.jpg', 'http://www.smart029.com.img.800cdn.com/images/11.jpg', 'http://www.smart029.com.img.800cdn.com/images/12.jpg', 'http://www.smart029.com.img.800cdn.com/images/1.jpg', 'http://www.smart029.com.img.800cdn.com/images/2.jpg', 'http://www.smart029.com.img.800cdn.com/images/3.jpg', 'http://www.smart029.com.img.800cdn.com/images/4.jpg', 'http://www.smart029.com.img.800cdn.com/images/5.jpg', 'http://www.smart029.com.img.800cdn.com/images/6.jpg', ]
   },
 
@@ -21,6 +24,8 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
+    var eTime = util.formatTime(new Date());
+    this.data.dataTime = eTime.substring(0, 10);
     wx.getSystemInfo({
       success: function (res) {
         that.setData({
@@ -42,7 +47,48 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    const ctx = wx.createCanvasContext('myCanvas')
+
+    // 新风监测
+    ctx.beginPath()
+    ctx.setFontSize(20)
+    ctx.setFillStyle('black')
+    ctx.fillText('新风监测系统', 10, 20)
+    ctx.stroke()
+
+    // 上线
+    ctx.beginPath()
+    ctx.setLineWidth(0.5)
+    ctx.moveTo(0, 25)
+    ctx.lineTo(170, 25)
+    ctx.stroke()
+    //下线
+    ctx.beginPath()
+    ctx.setLineWidth(0.5)
+    ctx.moveTo(0, 30)
+    ctx.lineTo(180, 30)
+    ctx.stroke()
+    //斜线
+    ctx.beginPath()
+    ctx.setLineWidth(0.5)
+    ctx.moveTo(170, 25)
+    ctx.lineTo(190, 35)
+    ctx.stroke()
+    // 后段线
+    ctx.beginPath()
+    ctx.setLineWidth(0.5)
+    ctx.moveTo(190, 35)
+    ctx.lineTo(this.data.devicewidth, 35)
+    ctx.stroke()
+    // 日期
+    ctx.beginPath()
+    ctx.setFontSize(13)
+    ctx.setFillStyle('black')
+    ctx.fillText(this.data.dataTime, this.data.devicewidth - 100, 32)
+    ctx.stroke()
+
+
+    ctx.draw()
   },
 
   /**
