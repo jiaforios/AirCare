@@ -200,9 +200,9 @@ Page({
 
 // 新风监测
     ctx.beginPath()
-    ctx.setFontSize(20)
-    ctx.setFillStyle('black')
-    ctx.fillText('新风监测系统', 30, 20)
+    ctx.setFontSize(22)
+    ctx.setFillStyle('grey')
+    ctx.fillText('设备监测数据', 15, 20)
     ctx.stroke()
 
 // 上线

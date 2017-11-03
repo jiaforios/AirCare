@@ -11,7 +11,7 @@ Page({
     zcodeimgurlstr:null,
     call:null,
     phone:null,
-    conpanyTips:null,
+    conpanyTips:'陕西嘉宝环境科技有限公司',
     devicewidth:0,
     deviceheight:0,
     picWidth:0,
@@ -87,7 +87,7 @@ Page({
     ctx.fillText(this.data.dataTime, this.data.devicewidth - 100, 32)
     ctx.stroke()
 
-    ctx.draw()
+    // ctx.draw()
   },
 
   /**
